@@ -15,7 +15,7 @@ const auto base = reinterpret_cast<const std::uintptr_t>(GetModuleHandleA(nullpt
 
 void bypass_trust_check()
 {
-        const auto patch_addr = (base + 0x1ABE4AF);
+        const auto patch_addr = (base + 0x19A6540);
 	DWORD old;	
 
 	VirtualProtect(reinterpret_cast<void*>(patch_addr), 1, PAGE_EXECUTE_READWRITE, &old);
